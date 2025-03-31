@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility Assessment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-4xl mx-auto p-6">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h1 class="text-3xl font-bold text-center mb-8 text-blue-600">
+        <i class="fas fa-clipboard-check mr-2"></i>Program Eligibility Assessment
+      </h1>
+      
+      <form action="/submit" method="POST" class="space-y-8">
+        <!-- Question 1: Employment Status -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-lg font-semibold px-2">1. What is your employment status?</legend>
+          <div class="space-y-2 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="employment" value="a" required class="form-radio">
+              <span>Employed full-time</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="employment" value="b" class="form-radio">
+              <span>Employed part-time</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="employment" value="c" class="form-radio">
+              <span>Unemployed (no current paid work)</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="employment" value="d" class="form-radio">
+              <span>Full-time student</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Question 2: Age -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-lg font-semibold px-2">2. What is your age?</legend>
+          <div class="space-y-2 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="age" value="a" required class="form-radio">
+              <span>Not yet 16</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="age" value="b" class="form-radio">
+              <span>16 or over but not yet 21</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="age" value="c" class="form-radio">
+              <span>21 or older</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Question 3: Education -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-lg font-semibold px-2">3. What is your current educational attainment?</legend>
+          <div class="space-y-2 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="education" value="a" required class="form-radio">
+              <span>Some high school</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="education" value="b" class="form-radio">
+              <span>Finished high school</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="education" value="c" class="form-radio">
+              <span>Some Post-Secondary</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="education" value="d" class="form-radio">
+              <span>Graduated Post-Secondary</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Question 4: EI Benefits -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-lg font-semibold px-2">4. Are you currently receiving employment insurance (EI) benefits?</legend>
+          <div class="space-y-2 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="ei" value="a" required class="form-radio">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="ei" value="b" class="form-radio">
+              <span>No</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Question 5: Underemployed -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-lg font-semibold px-2">5. Do you consider yourself to be underemployed?</legend>
+          <div class="space-y-2 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="underemployed" value="a" required class="form-radio">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="underemployed" value="b" class="form-radio">
+              <span>No</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Question 6: Employer Contact -->
+        <fieldset class="border border-gray-200 rounded-lg p-4">
+          <legend class="text-lg font-semibold px-2">6. Have you identified or made contact with an employer who may want to work with you if access to funding is available?</legend>
+          <div class="space-y-2 mt-2">
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="employer" value="a" required class="form-radio">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="radio" name="employer" value="b" class="form-radio">
+              <span>No</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200">
+          <i class="fas fa-paper-plane mr-2"></i>Check Eligibility
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
